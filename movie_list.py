@@ -31,15 +31,12 @@ def get_poster(title):
 
 movies_list=[]
 i=0
-print('No of movie trailers you want to view? ')
-n=raw_input()
-print(n)
-while(i<n):
+while(i<3):
     print('Your favorite movie no '+str(i+1))
     title=raw_input()
     movies_list.append(movie.Movie(title, get_poster(title), get_youtube_url(title)))
     i=i+1
-    print(i)
+
     
                   
 fav_movies.open_movies_page(movies_list)
