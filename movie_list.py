@@ -18,13 +18,12 @@ def get_youtube_url(title):
     return youtube_url
 
 def get_poster(title):
-    title =raw_input('Type in your favourite movie ')
     omdb_request = Request('http://www.omdbapi.com/?s='+urllib.quote_plus(title))
     response = urlopen(omdb_request)
     data = response.read()
     d=json.loads(data)
-    if 'false' in d:
-        poster= "No such movie"
+    if 'False' in data:
+        poster= "https://az853139.vo.msecnd.net/static/images/not-found.png" #No image found message
     else:
         poster=d['Search'][0]['Poster']
     return poster
@@ -32,14 +31,15 @@ def get_poster(title):
 
 movies_list=[]
 i=0
-while(i<3):
-    title =raw_input('Type in your favourite movie ')
+print('No of movie trailers you want to view? ')
+n=raw_input()
+print(n)
+while(i<n):
+    print('Your favorite movie no '+str(i+1))
+    title=raw_input()
     movies_list.append(movie.Movie(title, get_poster(title), get_youtube_url(title)))
     i=i+1
+    print(i)
     
-for fav_movie in movies_list:
-    print(fav_movie.poster)
-    print(fav_movie.trailer_url)                   
-
-
-
+                  
+fav_movies.open_movies_page(movies_list)
