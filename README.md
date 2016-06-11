@@ -1,4 +1,4 @@
-# Udacity project 1 - Movie Trailer Website
+# Movie Trailer Website
   1. [Task:](#task)
   2. [Requirements:](#requirements)
   3. [Demo:](#demo)
