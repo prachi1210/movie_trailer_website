@@ -8,9 +8,11 @@ To write server-side code to store a list of your favorite movies, including box
 
 I made a few of my own interpretations and instead of hard-coding instances, I got the user to input the title of their favourite movies and then get its details using the [Open Movies Database API](http://www.omdbapi.com/) and its trailer from [Youtube](https://www.youtube.com/)
 
-####Requirements:
+####Installation:
+    git clone https://github.com/prachi1210/movie_trailer_website.git
+    cd movie_trailer_website
     pip install bs4
-    run movie_list.py
+    python movie_list.py
 
 
 ####Demo:
